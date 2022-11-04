@@ -43,14 +43,17 @@ class BaseTest:
 
             self.driver=webdriver.Remote(girdurl,options=browseroptions)
 
-        # maximize window
+        #maximize the browser
         self.driver.maximize_window()
+
         # enter the URL
         print("Enter the url:",url)
         self.driver.get(url)
+
         # set the timeout
         print("Set ITO:",ITO)
         self.driver.implicitly_wait(ITO)
+
         print("Set ETO:",ETO)
         self.wait=WebDriverWait(self.driver,ETO)
 
